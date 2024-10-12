@@ -1,13 +1,14 @@
 FROM python:3-slim
 
-# Instalar las dependencias del sistema
+# Instalar las herramientas necesarias para compilar los paquetes
 RUN apt-get update && \
-    apt-get install -y gcc libffi-dev libssl-dev && \
+    apt-get install -y gcc build-essential libffi-dev libssl-dev make && \
     apt-get clean
 
 WORKDIR /programas/orquestador
 
 # Instalar FastAPI y otras dependencias
+RUN pip install --upgrade pip
 RUN pip3 install "fastapi[standard]"
 RUN pip3 install httpx
 RUN pip3 install pydantic
