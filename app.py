@@ -124,4 +124,4 @@ async def get_cursos_por_estudiante(codigo: str):
 # Ejecutar el servidor FastAPI
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8010)
