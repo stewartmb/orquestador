@@ -6,8 +6,8 @@ app = FastAPI()
 
 # URLs de los otros microservicios
 JAVA_MICRO_URL = 'http://java-microservice:8011'
-PYTHON_MICRO_URL = 'http://api-micro2:8012'
-NODE_MICRO_URL = 'http://api-micro3:8013'
+PYTHON_MICRO_URL = 'http://api-micro2:8000'
+NODE_MICRO_URL = 'http://api-micro3:8913'
 
 @app.get("/orquestador/inscripciones")
 async def get_inscripciones():
